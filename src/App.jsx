@@ -7,11 +7,13 @@ function App() {
 
   return (
     <>
+    <div className="bg-[#141414] overflow-x-hidden">
     <Header />
     <Routes>
       <Route path="/" element={<Home />}/>
     </Routes>
       <p>Home</p>
+      </div>
     </>
   );
 }

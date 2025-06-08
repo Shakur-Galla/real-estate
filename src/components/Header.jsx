@@ -20,7 +20,7 @@ const Header = () => {
   const menuItems = ['Home', 'About Us', 'Properties', 'Services'];
 
   return (
-    <header className="bg-[#141414] text-white">
+    <header className=" bg-[#141414] text-white">
       {/* Top Banner */}
       <div className="border-b border-white/10">
         <div className="container mx-auto px-4 py-2 text-center">

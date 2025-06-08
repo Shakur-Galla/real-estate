@@ -171,6 +171,7 @@ const FeaturedProperties = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };
