@@ -8,9 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Home');
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -20,7 +18,7 @@ const Header = () => {
   const menuItems = ['Home', 'About Us', 'Properties', 'Services'];
 
   return (
-    <header className=" bg-[#141414] text-white">
+    <header className="bg-[#141414] text-white">
       {/* Top Banner */}
       <div className="border-b border-white/10">
         <div className="container mx-auto px-4 py-2 text-center">
@@ -33,14 +31,12 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Navigation Section */}
-      <nav className="bg- backdrop-blur-sm border-b border-white/10">
+      {/* Navigation */}
+      <nav className="backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4">
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex justify-between items-center py-3">
-            <div>
-              <img src={Logo} alt="Estatein Logo" className="h-8" />
-            </div>
+          {/* Desktop */}
+          <div className="hidden md:flex justify-between items-center py-4">
+            <img src={Logo} alt="Estatein Logo" className="h-8" />
             <div className="flex space-x-1">
               {menuItems.map((item) => (
                 <Link
@@ -65,45 +61,45 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden py-3">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center justify-between">
-                <img src={Logo} alt="Estatein Logo" className="h-8 mr-4" />
-                <button
-                  onClick={toggleMenu}
-                  className="text-white focus:outline-none p-2 pl-52 rounded-lg hover:bg-gray-800"
-                >
-                  {isMenuOpen ? (
-                    <IoClose className='text-2xl hover:cursor-pointer'/>
-                  ) : (
-                    <BiMenuAltRight className='text-2xl hover:cursor-pointer' />
-                  )}
-                </button>
-              </div>
-              
-            </div>
+          {/* Mobile */}
+          <div className="md:hidden py-3 flex justify-between items-center">
+            <img src={Logo} alt="Estatein Logo" className="h-8" />
 
-            {/* Mobile Menu Items */}
-            {isMenuOpen && (
-              <div className="mt-4 bg-[#141414] rounded-lg p-2 space-y-1">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item}
-                    to="#"
-                    onClick={() => handleItemClick(item)}
-                    className={`block px-4 py-3 rounded-lg transition-all duration-300 ${
-                      activeItem === item
-                        ? 'bg-black shadow-sm border border-white/10 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                    }`}
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <button
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              role="button"
+              className="text-white p-2 rounded-lg hover:bg-gray-800 focus:outline-none"
+            >
+              {isMenuOpen ? <IoClose className="text-2xl" /> : <BiMenuAltRight className="text-2xl" />}
+            </button>
           </div>
+
+          {/* Mobile Menu Items */}
+          {isMenuOpen && (
+            <div className="md:hidden bg-[#141414] rounded-lg mt-2 p-3 space-y-1 transition-all duration-300">
+              {menuItems.map((item) => (
+                <Link
+                  key={item}
+                  to="#"
+                  onClick={() => handleItemClick(item)}
+                  className={`block px-4 py-3 rounded-lg ${
+                    activeItem === item
+                      ? 'bg-black shadow-sm border border-white/10 text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                  }`}
+                >
+                  {item}
+                </Link>
+              ))}
+              <Link
+                to="#"
+                className="block mt-3 bg-indigo-500 border border-white/10 text-white py-3 text-center rounded-md"
+              >
+                Contact Us
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
     </header>
