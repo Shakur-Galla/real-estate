@@ -1,14 +1,14 @@
-import React from 'react'
-import Banner from '../components/Banner'
-
+import React from "react";
+import Banner from "../components/Banner";
+import StatisticsGrid from '../components/StatisticsGrid'
 
 const Home = () => {
   return (
     <>
-        <Banner />
-
+      <Banner />
+      <StatisticsGrid/>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
