@@ -1,19 +1,21 @@
-import React from 'react';
-import { FiMail } from 'react-icons/fi';
-import { IoSend } from 'react-icons/io5';
+import React from "react";
+import {Link} from 'react-router-dom'
+import { FiMail } from "react-icons/fi";
+import { IoSend } from "react-icons/io5";
+import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { BsTwitterX } from "react-icons/bs";
 
-import Logo from '../assets/Logo.png'
+import Logo from "../assets/Logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-[#141414] text-white py-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between gap-12">
-        
         {/* Logo and Email Subscription */}
         <div>
           {/* Logo */}
           <div className="flex items-center mb-6">
-            <img src={Logo} alt="Shakur Galla"/>
+            <img src={Logo} alt="Shakur Galla" />
           </div>
 
           {/* Email Input */}
@@ -69,11 +71,21 @@ const Footer = () => {
           <div>
             <h4 className="mb-3 font-semibold text-gray-300">Services</h4>
             <ul className="space-y-2">
-              <li className="hover:underline cursor-pointer">Valuation Mastery</li>
-              <li className="hover:underline cursor-pointer">Strategic Marketing</li>
-              <li className="hover:underline cursor-pointer">Negotiation Wizardry</li>
-              <li className="hover:underline cursor-pointer">Closing Success</li>
-              <li className="hover:underline cursor-pointer">Property Management</li>
+              <li className="hover:underline cursor-pointer">
+                Valuation Mastery
+              </li>
+              <li className="hover:underline cursor-pointer">
+                Strategic Marketing
+              </li>
+              <li className="hover:underline cursor-pointer">
+                Negotiation Wizardry
+              </li>
+              <li className="hover:underline cursor-pointer">
+                Closing Success
+              </li>
+              <li className="hover:underline cursor-pointer">
+                Property Management
+              </li>
             </ul>
           </div>
 
@@ -87,6 +99,35 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <section className="text-white body-font">
+        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+            © 2025 Estatein —
+            <a
+              href="https://x.com/shakur_galla"
+              className="text-white ml-1"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Shakur Galla
+            </a>
+          </p>
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <Link to="https://x.com/shakur_galla" className="text-gray-500">
+              <AiFillFacebook  className="text-2xl text-white cursor-pointer"/>
+            </Link>
+            <Link to="https://www.instagram.com/shakur_galla/" className="ml-3 text-gray-500">
+              <AiFillInstagram className="text-2xl text-white cursor-pointer"/>
+            </Link>
+            <Link to="https://x.com/shakur_galla" className="ml-3 text-gray-500">
+              <BsTwitterX  className="text-2xl text-white cursor-pointer"/>
+            </Link>
+            <Link to="https://x.com/shakur_galla" className="ml-3 text-gray-500">
+              <AiFillLinkedin  className="text-2xl text-white cursor-pointer"/>
+            </Link>
+          </span>
+        </div>
+      </section>
     </footer>
   );
 };
