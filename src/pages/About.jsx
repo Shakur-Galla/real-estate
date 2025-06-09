@@ -1,8 +1,12 @@
 import React from 'react'
+import Journey from '../components/Journey'
+
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+        <Journey/>
+    </>
   )
 }
 
