@@ -58,7 +58,7 @@ const Team = () => {
               className="bg-[#1f1f1f] rounded-lg border border-white/10 p-6 text-white relative overflow-hidden flex flex-col items-center"
             >
               {/* Card Content */}
-              <img src={step.image} alt={step.name} className="w-45 h-45 rounded-md object-cover mb-4" />
+              <img src={step.image} alt={step.name} className="w-65 h-60 rounded-md object-cover mb-4" />
               <h3 className="text-lg font-semibold mb-2 text-center">{step.name}</h3>
               <p className="text-gray-400 text-sm mb-4 text-center">{step.position}</p>
               <div className="flex items-center bg-[#2a2a2a] text-gray-400 rounded-full px-4 py-2 mt-auto hover:bg-[#3a3a3a] transition gap-9">
