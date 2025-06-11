@@ -2,7 +2,7 @@ import React from 'react'
 
 const CallToAction = () => {
   return (
-        <section className="bg-[#141414] text-white body-font border-t border-b">
+        <section className="bg-[#141414] text-white body-font border-t border-b border-white/10">
           <div className="max-w-6xl px-5 py-12 mx-auto">
             {/* Header Section */}
             <div className="flex flex-wrap justify-between items-center w-full mb-12">
