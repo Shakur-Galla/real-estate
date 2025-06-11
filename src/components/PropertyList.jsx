@@ -1,15 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
 import { MdVilla } from "react-icons/md";
 
-import House1 from '../assets/house.png'
-import House2 from '../assets/house1.png'
-import House3 from '../assets/house3.png'
-
+import House1 from "../assets/house.png";
+import House2 from "../assets/house1.png";
+import House3 from "../assets/house3.png";
 
 const PropertyList = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-[#141414] text-white body-font">
       <div className="max-w-6xl px-5 py-12 mx-auto">
@@ -20,7 +21,10 @@ const PropertyList = () => {
               Discover New Properties
             </h1>
             <p className="w-full leading-relaxed text-gray-500">
-              Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click 'View Details' for more information.
+              Explore our handpicked selection of featured properties. Each
+              listing offers a glimpse into exceptional homes and investments
+              available through Estatein. Click 'View Details' for more
+              information.
             </p>
           </div>
         </div>
@@ -34,9 +38,12 @@ const PropertyList = () => {
               src={House1}
               alt="content"
             />
-            <h2 className="text-lg text-white font-medium mb-2">Seaside Serenity Villa</h2>
+            <h2 className="text-lg text-white font-medium mb-2">
+              Seaside Serenity Villa
+            </h2>
             <p className="text-sm text-gray-400 mb-4">
-              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...{" "}
+              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban
+              neighborhood...{" "}
               <Link className="text-indigo-400 hover:underline">Read More</Link>
             </p>
             <div className="flex justify-between text-sm text-gray-300">
@@ -52,13 +59,17 @@ const PropertyList = () => {
             </div>
             <div className="flex justify-between text-sm text-gray-300 mt-2">
               <div className="gird items-center gap-1 px-2 py-1 rounded">
-                 <p className="text-sm">Price</p>
-                 <p>₦ 90,000</p>
+                <p className="text-sm">Price</p>
+                <p>₦ 90,000</p>
               </div>
               <div className="flex items-center gap-1 bg-indigo-500 px-2 py-2 rounded">
-                <button className="hover:cursor-pointer">View Property Details</button>
+                <button
+                  onClick={() => navigate("/property-detail")}
+                  className="hover:cursor-pointer"
+                >
+                  View Property Details
+                </button>
               </div>
-              
             </div>
           </div>
 
@@ -69,9 +80,12 @@ const PropertyList = () => {
               src={House2}
               alt="content"
             />
-            <h2 className="text-lg text-white font-medium mb-2">Seaside Serenity Villa</h2>
+            <h2 className="text-lg text-white font-medium mb-2">
+              Seaside Serenity Villa
+            </h2>
             <p className="text-sm text-gray-400 mb-4">
-              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...{" "}
+              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban
+              neighborhood...{" "}
               <Link className="text-indigo-400 hover:underline">Read More</Link>
             </p>
             <div className="flex justify-between text-sm text-gray-300">
@@ -87,13 +101,17 @@ const PropertyList = () => {
             </div>
             <div className="flex justify-between text-sm text-gray-300 mt-2">
               <div className="gird items-center gap-1 px-2 py-1 rounded">
-                 <p className="text-sm">Price</p>
-                 <p>₦ 90,000</p>
+                <p className="text-sm">Price</p>
+                <p>₦ 90,000</p>
               </div>
               <div className="flex items-center gap-1 bg-indigo-500 px-2 py-2 rounded">
-                <button className="hover:cursor-pointer">View Property Details</button>
+                <button
+                  onClick={() => navigate("/property-detail")}
+                  className="hover:cursor-pointer"
+                >
+                  View Property Details
+                </button>
               </div>
-              
             </div>
           </div>
 
@@ -104,9 +122,12 @@ const PropertyList = () => {
               src={House3}
               alt="content"
             />
-            <h2 className="text-lg text-white font-medium mb-2">Seaside Serenity Villa</h2>
+            <h2 className="text-lg text-white font-medium mb-2">
+              Seaside Serenity Villa
+            </h2>
             <p className="text-sm text-gray-400 mb-4">
-              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...{" "}
+              A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban
+              neighborhood...{" "}
               <Link className="text-indigo-400 hover:underline">Read More</Link>
             </p>
             <div className="flex justify-between text-sm text-gray-300">
@@ -122,19 +143,21 @@ const PropertyList = () => {
             </div>
             <div className="flex justify-between text-sm text-gray-300 mt-2">
               <div className="gird items-center gap-1 px-2 py-1 rounded">
-                 <p className="text-sm">Price</p>
-                 <p>₦ 90,000</p>
+                <p className="text-sm">Price</p>
+                <p>₦ 90,000</p>
               </div>
               <div className="flex items-center gap-1 bg-indigo-500 px-2 py-2 rounded">
-                <button className="hover:cursor-pointer">View Property Details</button>
+                <button
+                  onClick={() => navigate("/property-detail")}
+                  className="hover:cursor-pointer"
+                >
+                  View Property Details
+                </button>
               </div>
-              
             </div>
           </div>
-
         </div>
       </div>
-      
     </section>
   );
 };
